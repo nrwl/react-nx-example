@@ -28,26 +28,32 @@
   },
   "private": true,
   "dependencies": {
+    "@nestjs/common": "5.5.0",
+    "@nestjs/core": "5.5.0",
     "react": "16.8.3",
-    "react-dom": "16.8.3"
+    "react-dom": "16.8.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "@angular/cli": "7.3.1",
+    "@nestjs/schematics": "5.11.2",
+    "@nestjs/testing": "5.5.0",
     "@nrwl/builders": "7.7.0-beta.10",
-    "jest": "23.0.0",
+    "@nrwl/schematics": "7.7.0-beta.10",
     "@types/jest": "23.0.0",
-    "jest-preset-angular": "6.0.1",
+    "@types/jquery": "3.3.6",
+    "@types/node": "~8.9.4",
     "@types/react": "16.8.4",
     "@types/react-dom": "16.8.2",
-    "react-testing-library": "6.0.0",
     "cypress": "3.1.0",
-    "@types/jquery": "3.3.6",
-    "@angular/cli": "7.3.1",
-    "@nrwl/schematics": "7.7.0-beta.10",
-    "@types/node": "~8.9.4",
     "dotenv": "6.2.0",
+    "jest": "23.0.0",
+    "jest-preset-angular": "6.0.1",
+    "prettier": "1.15.2",
+    "react-testing-library": "6.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "3.2.2",
-    "prettier": "1.15.2"
+    "typescript": "3.2.2"
   }
 }

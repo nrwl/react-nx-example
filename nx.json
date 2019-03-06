@@ -8,10 +8,20 @@
     "nx.json": "*"
   },
   "projects": {
-    "my-app": {
+"my-app": {
+  "implicitDependencies": ["api"],
+  "tags": []
+},
+    "my-app-e2e": {
       "tags": []
     },
-    "my-app-e2e": {
+    "api": {
+      "tags": []
+    },
+    "gifs": {
+      "tags": []
+    },
+    "home": {
       "tags": []
     }
   }

@@ -1,0 +1,16 @@
+import * as React from 'react';
+import "./<%= fileName %>.scss";
+
+interface <%= componentName %>Props {
+  children?: React.ReactNode
+}
+
+export const <%= componentName %> = (props: <%= componentName %>Props) => {
+  return (
+    <div>
+      <h1><%= componentName %></h1>
+      <p>It works!</p>
+      { props.children }
+    </div>
+  )
+}

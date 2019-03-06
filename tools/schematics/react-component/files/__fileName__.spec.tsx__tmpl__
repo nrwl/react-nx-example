@@ -1,0 +1,13 @@
+import * as React from 'react';
+import { render, cleanup } from 'react-testing-library';
+
+import { <%= componentName %> } from './<%= fileName %>';
+
+describe('<%= componentName %>', () => {
+  afterEach(cleanup);
+
+  test('Rendering', async () => {
+    const { container } = render(<<%= componentName %>/>);
+    expect(container.innerHTML).toMatch(/It works!/);
+  });
+});
