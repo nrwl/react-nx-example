@@ -17,6 +17,7 @@
         "build": {
           "builder": "@nrwl/builders:web-build",
           "options": {
+            "webpackConfig": "apps/my-app/webpack.config.js",
             "outputPath": "dist/apps/my-app",
             "index": "apps/my-app/src/index.html",
             "main": "apps/my-app/src/main.tsx",
