@@ -22,8 +22,13 @@
             "main": "apps/my-app/src/main.tsx",
             "polyfills": "apps/my-app/src/polyfills.ts",
             "tsConfig": "apps/my-app/tsconfig.app.json",
-            "assets": ["apps/my-app/src/favicon.ico", "apps/my-app/src/assets"],
-            "styles": ["apps/my-app/src/styles.scss"],
+            "assets": [
+              "apps/my-app/src/favicon.ico",
+              "apps/my-app/src/assets"
+            ],
+            "styles": [
+              "apps/my-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -69,7 +74,9 @@
               "apps/my-app/tsconfig.app.json",
               "apps/my-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -103,7 +110,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/my-app-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -121,7 +130,9 @@
               "libs/home/tsconfig.lib.json",
               "libs/home/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -151,7 +162,9 @@
               "libs/gifs/tsconfig.lib.json",
               "libs/gifs/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -165,6 +178,65 @@
       "schematics": {
         "@nrwl/schematics:component": {
           "styleext": "scss"
+        }
+      }
+    },
+    "api": {
+      "root": "apps/api",
+      "sourceRoot": "apps/api/src",
+      "projectType": "application",
+      "prefix": "api",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/api",
+            "main": "apps/api/src/main.ts",
+            "tsConfig": "apps/api/tsconfig.app.json",
+            "assets": [
+              "apps/api/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api/src/environments/environment.ts",
+                  "with": "apps/api/src/environments/environment.prod.ts"
+                }
+              ],
+              "externalDependencies": "none"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "api:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/api/tsconfig.app.json",
+              "apps/api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/api/jest.config.js",
+            "tsConfig": "apps/api/tsconfig.spec.json"
+          }
         }
       }
     }

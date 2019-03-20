@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import './app.scss';
 import { Home } from '@my-app/home';
 import { Gifs } from '@my-app/gifs';
 import { environment } from '../environments/environment';
+
+import './app.scss';
 
 export const App = () => (
   <BrowserRouter>
@@ -19,7 +20,7 @@ export const App = () => (
         </ul>
       </nav>
       <div className="app-content">
-        <Route path="/" exact component={Home} />{' '}
+        <Route path="/" exact component={Home} />
         <Route
           path="/gifs"
           render={() => <Gifs apiKey={environment.giphy.apiKey} />}

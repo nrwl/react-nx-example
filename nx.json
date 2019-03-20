@@ -9,6 +9,9 @@
   },
   "projects": {
     "my-app": {
+      "implicitDependencies": [
+        "api"
+      ],
       "tags": []
     },
     "my-app-e2e": {
@@ -18,6 +21,9 @@
       "tags": []
     },
     "gifs": {
+      "tags": []
+    },
+    "api": {
       "tags": []
     }
   }

@@ -28,6 +28,8 @@
   },
   "private": true,
   "dependencies": {
+    "@nestjs/common": "5.5.0",
+    "@nestjs/core": "5.5.0",
     "axios": "^0.18.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
@@ -35,6 +37,9 @@
     "react-router-dom": "^5.0.0"
   },
   "devDependencies": {
+    "ts-jest": "24.0.0",
+    "@nestjs/schematics": "5.11.2",
+    "@nestjs/testing": "5.5.0",
     "@angular/cli": "7.3.1",
     "@nrwl/builders": "7.7.2",
     "@nrwl/schematics": "7.7.2",
@@ -48,7 +53,6 @@
     "jest": "24.1.0",
     "prettier": "1.15.2",
     "react-testing-library": "6.0.0",
-    "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "3.2.2"
