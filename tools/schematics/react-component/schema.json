@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "react-component",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "tag": {
+      "type": "string",
+      "description": "Element tag name",
+      "default": "div"
+    }
+  },
+  "required": ["name"]
+}

@@ -1,0 +1,16 @@
+import * as React from 'react';
+import styled from 'styled-components';
+
+interface <%= componentName %>Props {
+  children?: React.ReactNode
+}
+
+const Container = styled.<%= tagName %>`
+  // Put your styles here!
+`
+
+export const <%= componentName %> = ({ children }: <%= componentName %>Props) => (
+  <Container>
+  {children}
+  </Container>
+);

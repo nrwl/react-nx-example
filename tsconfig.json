@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-app/home": ["libs/home/src/index.ts"],
+      "@my-app/gifs": ["libs/gifs/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
