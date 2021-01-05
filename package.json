@@ -30,7 +30,7 @@
   "dependencies": {
     "@nestjs/common": "5.5.0",
     "@nestjs/core": "5.5.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-router": "^5.0.0",
